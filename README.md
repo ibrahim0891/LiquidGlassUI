@@ -10,6 +10,8 @@ The design features:
 - Navigation controls at the bottom
 
 ---
+🚀 Live preview: [https://ibrahim0891.github.io/LiquidGlassUI](https://ibrahim0891.github.io/LiquidGlassUI/)
+---
 
 ## 🌐 Full Page Preview
 
