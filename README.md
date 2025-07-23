@@ -13,15 +13,17 @@ The design features:
 
 ## 🌐 Full Page Preview
 
-![Webpage Screenshot](./assets/Screenshots/Tailwind-Intellisense-07-23-2025_06_51_PM.png)
+![Webpage Screenshot](./assets/Screenshots/Fullpage.png)
 
 ---
 
 ## 📱 Mobile Phone Frame Preview
+ 
+<div style='display:grid; grid-template-column: repeat(2, 1fr)'>
 
-> _(Add a screenshot of the same page displayed on a phone with a phone frame here)_
+![Phone Frame Screenshot](./assets/Screenshots/iPhone-14-1.png) 
 
-![Phone Frame Screenshot](./your-image-path/phone-frame-screenshot.png)
+</div>
 
 ---
 
@@ -34,3 +36,14 @@ The design features:
 
 ## 📂 Project Structure
 
+```plaintext
+project-root/
+├── index.html
+├── styles/
+│ └── tailwind.css (or CDN if used inline)
+├── assets/
+│ ├── screenshots/
+│ │ ├── full-page.png
+│ │ └── phone-frame.png
+└── README.md
+```
