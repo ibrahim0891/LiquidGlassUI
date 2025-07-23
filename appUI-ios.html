@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind Intellisense</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style type="text/tailwindcss">
+        *{
+            font-family:  'poppins'; 
+        }
+        @layer components{
+
+                /* padding specialy used for the main containers  */
+                .screen-pad-v {
+                    @apply px-8;
+                }
+                .screen-pad-h {
+                    @apply py-8;
+                }
+
+                /* make the button look like liquid glass ui buttons  */
+                .single-button{
+                    @apply shadow-md bg-slate-100/20 p-2 rounded-full aspect-square w-10 h-10 grid place-content-center transition-all backdrop-blur-md border-t-1 border-gray-200/90 text-black; 
+                } 
+                .single-button:hover{
+                    @apply shadow-md; 
+                }
+                .single-button:active{
+                    @apply shadow-md scale-110; 
+                }
+
+                /* group buttons together with a blurred background */
+                .btn-group{
+                    @apply  shadow-md flex place-content-center backdrop-blur-sm rounded-full bg-slate-100/20  px-2 border-t-1 border-gray-200/40 ;
+                    button{
+                        @apply p-2 px-2; 
+                    }
+                }
+
+                /* Applying font size based on visual satisfiction  */
+                p{
+                    @apply text-xs leading-6; 
+                }
+            }
+        </style>
+
+    <body
+        class="h-screen  bg-cover">
+
+        <!-- container to cetner the screen in viewport -->
+        <div class="  ">
+
+            <!-- phone screen -->
+            <main class=" overflow-auto flex flex-col h-screen">
+
+                <!-- app top bar -->
+                <div class="flex items-center justify-between pt-8 absolute top-0 z-10 screen-pad-v w-full">
+                    <button class="single-button">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="btn-group">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- overlay nav bar  -->
+                <nav class="flex items-center justify-between mt-4 absolute bottom-0 screen-pad-v w-full screen-pad-h">
+
+                    <!-- left side -->
+                    <div class="flex gap-2">
+                        <button class="single-button">
+                            <i class="fa-solid fa-heart text-rose-600"></i>
+                        </button>
+                        <button class="single-button">
+                            <i class="fa-solid fa-retweet"></i>
+                        </button>
+                    </div>
+
+                    <!-- right side -->
+                    <div class="flex gap-4">
+                        <button class="single-button">
+                            <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <div class="btn-group">
+                            <button>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-retweet"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </nav>
+                
+                
+                <!-- header image container -->
+                <header
+                class="aspect-video w-full bg-[url(https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg)] bg-no-repeat bg-cover  screen-pad-v relative  top-0 -z-10">
+                    <!-- overlay  -->
+                    <!-- <div class="absolute inset-0 bg-gradient-to-t from-slate-100 to-transparent"></div> -->
+                </header>
+                
+                <!-- app content like text, paragraph etc  -->
+                <section class="screen-pad-v screen-pad-h  file:flex-1 bg-slate-100 flex-1">
+                    
+                    <!-- section heading  -->
+                    <div class="pb-4 flex items-start justify-between text-2xl ">
+                        <div class="space-y-4 items-center justify-center">
+                            <img src="./avaer.jpg" class="w-16 rounded-full" alt="avater">
+                            <div>
+                                <h1 class="font-bold">Blur backgound UI </h1>
+                                <p class="text-xs"> 12:30PM | 12 July 2025n- <b> 2</b> minute read</p>
+                            </div>
+                        </div>
+                        <div class="text-lg space-x-2 ">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <i class="fa-solid fa-heart text-rose-600"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Paragrph section -->
+                    <article class=" mb-16">
+                        <p class="text-sm">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, quaerat? Molestiae, porro?
+                        </p>
+                        <p class="text-sm">
+                            <img class="my-4 aspect-video object-cover rounded-lg " src="https://images.pexels.com/photos/3252136/pexels-photo-3252136.jpeg" alt="">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio optio reiciendis
+                            quisquam quidem dicta temporibus ratione est explicabo. Modi, debitis nisi quae repellendus
+                            magni totam mollitia libero maiores quisquam!
+                            quisquam quidem dicta temporibus ratione est explicabo. Modi, debitis nisi quae repellendus
+                            magni totam mollitia libero maiores quisquam!
+                            <br>
+                            <button class="single-button my-2">
+                                🚀
+                            </button>
+                        </p>
+                        <p class="text-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio optio reiciendis
+                            quisquam quidem dicta temporibus ratione est explicabo. Modi, debitis nisi quae repellendus
+                            <img class="my-4 aspect-video object-cover rounded-lg " src="https://images.pexels.com/photos/3252136/pexels-photo-3252136.jpeg" alt="">
+                            magni totam mollitia libero maiores quisquam!
+                            quisquam quidem dicta temporibus ratione est explicabo. Modi, debitis nisi quae repellendus
+                            magni totam mollitia libero maiores quisquam!
+                        </p>
+                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius natus reprehenderit neque sint
+                            fugiat esse maxime ut. Rerum ratione maxime non, officiis suscipit ea molestias incidunt
+                            deleniti veritatis et accusamus.
+                        </p>
+                    </article>
+
+                </section>
+
+
+            </main>
+        </div>
+
+    </body>
+
+</html>
